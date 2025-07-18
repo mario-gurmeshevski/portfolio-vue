@@ -18,7 +18,7 @@ Showcasing my skills, projects, education, and contact information.
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Vite](https://vitejs.dev/)
-- [vue-icons-plus](https://github.com/matschik/vue-icons-plus)
+- [vue-icons-plus](https://vue-icons.com/icons/)
 
 ## Structure
 
