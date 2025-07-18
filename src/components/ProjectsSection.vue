@@ -118,7 +118,7 @@ const projects = ref<Project[]>([
     type: 'site',
     description: 'Responsive portfolio website built with Vue, Tailwind CSS and Vite.',
     techStack: ['Vue', 'Vite', 'Tailwind CSS'],
-    liveUrl: 'https://mariogurmeshevski.com/',
+    liveUrl: 'https://gurmeshevskimario.com/',
     githubUrl: 'https://github.com/mario-gurmeshevski/portfolio-vue',
     status: ProjectStatus.LIVE,
   },
