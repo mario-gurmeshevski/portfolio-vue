@@ -1,39 +1,50 @@
-# portfolio_vue
+# Mario Gurmeshevski Portfolio
 
-This template should help get you started developing with Vue 3 in Vite.
+A modern, responsive portfolio website built with **Vue 3**, **TypeScript**, and **Tailwind CSS**.  
+Showcasing my skills, projects, education, and contact information.
 
-## Recommended IDE Setup
+## Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- **Home**: Introduction, technologies bar, education, and projects.
+- **Skills**: Technical skills, current learning focus, and collaboration info.
+- **Contact**: Contact form (Formspree), social links, and availability.
+- **Sidebar**: "About Me" quick access.
+- **Responsive Design**: Works on all devices.
+- **Animated Tech Bar**: Showcases technologies with icons.
 
-## Type Support for `.vue` Imports in TS
+## Tech Stack
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- [Vue 3](https://vuejs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
+- [vue-icons-plus](https://github.com/matschik/vue-icons-plus)
 
-## Customize configuration
+## Structure
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+```
+src/
+  assets/         # Icons, global styles
+  components/     # Reusable Vue components
+  router/         # Vue Router setup
+  views/          # Main pages (Home, Skills, Contact)
+  App.vue         # Root component
+  main.ts         # App entry point
+```
 
-## Project Setup
+## 📦 Setup
 
-```sh
+```bash
+# Install dependencies
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# Run development server
 npm run dev
-```
 
-### Type-Check, Compile and Minify for Production
-
-```sh
+# Build for production
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+## 🌐 Live Demo
 
-```sh
-npm run lint
-```
+[gurmeshevskimario.com](https://gurmeshevskimario.com/)
