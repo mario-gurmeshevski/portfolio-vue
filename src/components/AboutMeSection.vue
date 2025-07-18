@@ -42,7 +42,7 @@
           <h4 class="font-semibold text-sky-400 mb-2">Location</h4>
           <div class="flex items-center space-x-2">
             <Fa6LocationDot class="w-6 h-6 text-sky-400" />
-            <span class="text-white text-sm font-bold">Macedonia, Skopje</span>
+            <span class="text-white text-sm font-bold">Skopje, Macedonia</span>
           </div>
         </div>
       </div>
