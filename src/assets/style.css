@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+@import '@fontsource/iosevka/400.css';
+@import '@fontsource/iosevka/700.css';
+
+html,
+body {
+  font-family: 'Iosevka', monospace;
+  overscroll-behavior: none;
+}
