@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+const navItems = [
+  { to: '/', text: 'Home' },
+  { to: '/skills', text: 'Skills' },
+  { to: '/contact', text: 'Contact' },
+]
 </script>
 
 <template>
@@ -8,17 +13,13 @@ import { RouterLink } from 'vue-router'
       <nav
         class="flex text-center justify-center gap-4 sm:gap-8 md:gap-20 text-lg sm:text-xl md:text-2xl pt-4 tracking-wide sm:tracking-widest px-4"
       >
-        <RouterLink class="inline-block corner-brackets p-2 sm:p-1 touch-manipulation" to="/">
-          Home
-        </RouterLink>
-        <RouterLink class="inline-block corner-brackets p-2 sm:p-1 touch-manipulation" to="/skills">
-          Skills
-        </RouterLink>
         <RouterLink
+          v-for="item in navItems"
+          :key="item.to"
+          :to="item.to"
           class="inline-block corner-brackets p-2 sm:p-1 touch-manipulation"
-          to="/contact"
         >
-          Contact
+          {{ item.text }}
         </RouterLink>
       </nav>
     </div>
