@@ -28,9 +28,9 @@ watch(isAboutMeOpen, (newValue) => {
     <button
       v-if="!isAboutMeOpen"
       @click="toggleAboutMe"
-      class="button bg-transparent border hover:cursor-pointer border-solid border-[rgba(255, 255, 255, 0.3)] text-white px-2 py-4 rounded-r-lg shadow-lg min-h-[120px] w-10 flex items-center justify-center"
+      class="button bg-transparent border hover:cursor-pointer border-solid border-[rgba(255, 255, 255, 0.3)] text-white px-1 sm:px-2 py-3 sm:py-4 rounded-r-lg shadow-lg min-h-[100px] sm:min-h-[120px] w-8 sm:w-10 flex items-center justify-center touch-manipulation"
     >
-      <span class="text-sm font-medium whitespace-nowrap [writing-mode:sideways-lr]">
+      <span class="text-xs sm:text-sm font-medium whitespace-nowrap [writing-mode:sideways-lr]">
         Learn more about me
       </span>
     </button>
@@ -39,14 +39,14 @@ watch(isAboutMeOpen, (newValue) => {
   <Transition name="slide">
     <div
       v-if="isAboutMeOpen"
-      class="fixed bg left-0 top-0 h-full w-80 backdrop-blur-sm z-40 shadow-2xl"
+      class="fixed bg left-0 top-0 h-full w-full sm:w-80 backdrop-blur-sm z-40 shadow-2xl"
     >
-      <div class="h-full overflow-y-auto p-6">
-        <div class="flex justify-between items-center mb-6">
-          <h2 class="text-2xl font-bold text-white">About Me</h2>
+      <div class="h-full overflow-y-auto p-4 sm:p-6 safe-area-inset">
+        <div class="flex justify-between items-center mb-4 sm:mb-6">
+          <h2 class="text-xl sm:text-2xl font-bold text-white">About Me</h2>
           <button
             @click="toggleAboutMe"
-            class="text-gray-400 hover:text-white text-2xl hover:cursor-pointer"
+            class="text-gray-400 hover:text-white text-2xl hover:cursor-pointer p-2 touch-manipulation"
           >
             <HiXMark />
           </button>
@@ -62,6 +62,21 @@ watch(isAboutMeOpen, (newValue) => {
 </template>
 
 <style scoped>
+.safe-area-inset {
+  padding-top: max(1rem, env(safe-area-inset-top));
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  padding-left: max(1rem, env(safe-area-inset-left));
+  padding-right: max(1rem, env(safe-area-inset-right));
+}
+
+@media (max-width: 640px) {
+  .button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: none;
+  }
+}
+
 .slide-enter-active,
 .slide-leave-active {
   transition: transform 0.3s ease-in-out;
