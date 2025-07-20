@@ -31,18 +31,35 @@ import FooterSection from './components/FooterSection.vue'
     auto;
   background-repeat: repeat, repeat, no-repeat;
   background-attachment: fixed;
-}
-
-.bg {
   overflow-x: hidden;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
+  .bg {
+    background-size:
+      15px 15px,
+      15px 15px,
+      auto;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
   .bg {
     background-size:
       20px 20px,
       20px 20px,
       auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg {
+    background-attachment: scroll;
+  }
+
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 }
 
@@ -57,12 +74,6 @@ import FooterSection from './components/FooterSection.vue'
         #06283b 50%,
         #030712 100%
       );
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .bg {
-    background-attachment: scroll;
   }
 }
 </style>

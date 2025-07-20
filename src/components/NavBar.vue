@@ -6,11 +6,20 @@ import { RouterLink } from 'vue-router'
   <header>
     <div>
       <nav
-        class="flex text-center justify-center gap-8 md:gap-20 text-xl md:text-2xl pt-4 tracking-widest"
+        class="flex text-center justify-center gap-4 sm:gap-8 md:gap-20 text-lg sm:text-xl md:text-2xl pt-4 tracking-wide sm:tracking-widest px-4"
       >
-        <RouterLink class="inline-block corner-brackets p-1" to="/"> Home </RouterLink>
-        <RouterLink class="inline-block corner-brackets p-1" to="/skills"> Skills </RouterLink>
-        <RouterLink class="inline-block corner-brackets p-1" to="/contact"> Contact </RouterLink>
+        <RouterLink class="inline-block corner-brackets p-2 sm:p-1 touch-manipulation" to="/">
+          Home
+        </RouterLink>
+        <RouterLink class="inline-block corner-brackets p-2 sm:p-1 touch-manipulation" to="/skills">
+          Skills
+        </RouterLink>
+        <RouterLink
+          class="inline-block corner-brackets p-2 sm:p-1 touch-manipulation"
+          to="/contact"
+        >
+          Contact
+        </RouterLink>
       </nav>
     </div>
   </header>
@@ -26,9 +35,11 @@ import { RouterLink } from 'vue-router'
     border-color 0.075s ease 0.075s,
     border-width 0.075s ease 0.075s,
     transform 0.3s ease;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-/* Create corner brackets using clip-path */
 .corner-brackets::before,
 .corner-brackets::after {
   content: '';
@@ -86,5 +97,11 @@ import { RouterLink } from 'vue-router'
     /* Left to create bracket thickness */ calc(100% - 1px) calc(100% - 1px),
     /* Down to inner edge */ calc(100% - 10px) calc(100% - 1px) /* Left to end of horizontal line */
   );
+}
+
+@media (max-width: 768px) {
+  .corner-brackets:hover {
+    --transform: scale(1);
+  }
 }
 </style>
